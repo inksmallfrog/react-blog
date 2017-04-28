@@ -1,0 +1,52 @@
+/*
+* @Author: inksmallfrog
+* @Date:   2017-04-28 10:04:55
+* @Last Modified by:   inksmallfrog
+* @Last Modified time: 2017-04-28 15:41:08
+*/
+:root{
+    --mainLeftMargin: 150px;
+    --navWidth: 100px;
+    --navLeftMargin: 20px;
+    --transitionTime: .5s;
+}
+.navigatorBox{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: var(--mainLeftMargin);
+    /*background-color: white;*/
+    & .navigator{
+        position: fixed;
+        top: 50px;
+        left: var(--navLeftMargin);
+        width: var(--navWidth);
+        text-align: right;
+        color: #999;
+        transition: color var(--transitionTime), top var(--transitionTime);
+
+        &.passageNav{
+            top: 50%;
+        }
+
+        & .navTop{
+            padding: 10px 0;
+        }
+
+        & .navBottom{
+            border-top: #ccc solid 1px;
+            padding: 10px 0;
+            transition: border-color var(--transitionTime);
+        }
+    }
+    &:hover{
+        & .navigator{
+            color: #333;
+            & .navBottom{
+                border-color: #aaa;
+            }
+        }
+    }
+}
+

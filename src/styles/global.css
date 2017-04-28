@@ -1,0 +1,25 @@
+/*
+* @Author: inksmallfrog
+* @Date:   2017-04-28 10:37:09
+* @Last Modified by:   inksmallfrog
+* @Last Modified time: 2017-04-28 15:41:41
+*/
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    min-height: 100%;
+    background-color: #eee;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+

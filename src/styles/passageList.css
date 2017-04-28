@@ -1,0 +1,48 @@
+/*
+* @Author: inksmallfrog
+* @Date:   2017-04-28 11:13:21
+* @Last Modified by:   inksmallfrog
+* @Last Modified time: 2017-04-28 23:39:43
+*/
+section{
+    & header{
+        & h1{
+            display: inline-block;
+            font-size: 2.5rem;
+            margin-right: 30px;
+        }
+        & p{
+            display: inline-block;
+            color: #666;
+        }
+        margin-bottom: 20px;
+    }
+}
+
+.year{
+    margin-bottom: 20px;
+    & .secTitle{
+        font-size: 25px;
+        border-bottom: #aaa 1px solid;
+    }
+}
+
+.month{
+    margin: 0 20px;
+    margin-bottom: 10px;
+    list-style-type: disc;
+    & .secTitle{
+        font-size: 22px;
+        border: none;
+    }
+}
+
+.passage{
+    margin: 0 20px;
+    & p{
+        display: inline-block;
+    }
+    & .pDate{
+        margin-right: 20px;
+    }
+}
