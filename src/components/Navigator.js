@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 10:02:52
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-28 19:12:43
+* @Last Modified time: 2017-04-29 12:13:00
 */
 
 'use strict';
@@ -31,21 +31,3 @@ export default ({match})=>{
         </nav>
     )
 }
-
-/*export default class Navigator extends React.Component{
-    render(){
-        let navTop = this.props.isPassage ? <NavPassageTop/> : <NavHomeTop/>,
-            navClass = this.props.isPassage ? style.navigator + " " + style.passageNav : style.navigator;
-        return(
-            <aside className={style.navigatorBox}>
-                <div className={navClass}>
-                    {navTop}
-                    <ul className={style.navBottom}>
-                        <li><Link to="/">主页</Link></li>
-                        <li><Link to="/aboutme">关于我</Link></li>
-                    </ul>
-                </div>
-            </aside>
-        )
-    }
-}*/

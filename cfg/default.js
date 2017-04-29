@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 07:10:01
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-28 21:07:33
+* @Last Modified time: 2017-04-29 08:57:05
 */
 
 /**
@@ -50,15 +50,15 @@ function getDefaultModules(){
                 use: 'json-loader'
             },
             {
-                test: /\.md$/,
-                use: [
+                 test: /\.(eot|otf|svg|ttf|woff|woff2)$/,
+                 use: [
                     {
-                        loader: 'html-loader'
-                    },
-                    {
-                        loader: "markdown-loader"
+                        loader: 'url-loader',
+                        options: {
+                            name: 'fonts/[name].[md5:hash:hex:7].[ext]'
+                        }
                     }
-                ]
+                 ]
             }
         ]
     };

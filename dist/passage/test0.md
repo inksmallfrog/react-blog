@@ -1,7 +1,7 @@
 ---
 title: CSS常见知识汇总
 date: 2017-03-05 17:26:43
-category: Tech
+category: 技术
 tags: [Web, CSS]
 ---
 
@@ -59,6 +59,7 @@ div{
     font: 100%/20px /*font-size: 100% & line-height: 20px*/
 }
 ```
+
 继承:
 1. 百分比：继承自父元素的font-size * line-height
 2. 长度：继承值
@@ -67,18 +68,16 @@ div{
 ### line-boxes' height
 height = 行内所有非替换标签产生的inline-boxes中: max(line-height)
 
-
 ## padding & margin
 百分比值均根据包含块的**宽度**计算
 ### 负外边距(negative margin)
-#### 作用于width可确定的static元素(行内元素，定义width的块元素)
-1. margin-top, margin-left的负值会使元素向该方向平移
-2. margin-bottom, margin-right的负值会使后续文本流元素被拉入
-
-#### 作用于width不可确定的static元素(未定义width的块元素)
-margin-left, margin-right的负值会使元素width增大
-#### 作用于浮动元素
-在“浮动流”中与文本流效果相似
+1. 作用于width可确定的static元素(行内元素，定义width的块元素)
+    1. margin-top, margin-left的负值会使元素向该方向平移
+    2. margin-bottom, margin-right的负值会使后续文本流元素被拉入
+2. 作用于width不可确定的static元素(未定义width的块元素)
+    margin-left, margin-right的负值会使元素width增大
+3. 作用于浮动元素
+    在“浮动流”中与文本流效果相似
 ### 外边距合并(margin collapsing)
 1. 邻近兄弟元素
 2. 父元素与第一或末尾子元素之间

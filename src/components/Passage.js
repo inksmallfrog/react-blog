@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 14:36:09
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-28 23:30:26
+* @Last Modified time: 2017-04-29 13:11:09
 */
 
 'use strict';
@@ -22,7 +22,8 @@ export default class Passage extends React.Component{
             content: '',
             metadata: {
                 title: "untitled",
-                category: "default"
+                category: "default",
+                date: "2017-04-27"
             },
             previousPassage: null,
             nextPassage: null
@@ -90,7 +91,11 @@ export default class Passage extends React.Component{
                     : <a className={style.linkDisable}>下一篇？敬请期待</a>;
         return (
             <article>
-                <h1>{this.state.metadata.title}</h1>
+                <h1 className={style.title}>{this.state.metadata.title}</h1>
+                <aside>
+                    <div className={style.pubTime}>发表于：{this.state.metadata.date}</div>
+                    <div className={style.category}>分类：{this.state.metadata.category}</div>
+                </aside>
                 <ReactMarkdown source={this.state.content} className={style.passage}/>
                 {nextLink}
                 {previousLink}

@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-26 16:03:43
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-28 16:50:10
+* @Last Modified time: 2017-04-29 13:22:02
 */
 
 'use strict';
@@ -17,6 +17,7 @@ import Navigator from 'components/Navigator';
 import PassageList from 'components/PassageList'
 import Passage from 'components/Passage';
 
+import 'styles/iconfont.css';
 import 'styles/global.css';
 import style from 'styles/root.css';
 

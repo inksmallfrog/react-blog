@@ -2,46 +2,77 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 19:15:48
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-28 23:14:56
+* @Last Modified time: 2017-04-29 13:12:39
 */
 :root{
     --linkStyle: {
         display: inline-block;
         margin-right: 80px;
     };
+    --topHeader: {
+        font-family: avenir, SimSun, "Microsoft YaHei", "微软雅黑", sans-serif;
+        margin: 20px 0;
+    };
+    --subHeader: {
+        font-family: 'Helvetica Neue', 'Helvetica', STXihei, "华文细黑", SimSun, "Microsoft YaHei", "微软雅黑", sans-serif;
+        margin: 20px 0 10px 0;
+    };
 }
 article{
-    & h1{
+    position: relative;
+    & .title{
+        font-family: avenir, SimSun, "Microsoft YaHei", "微软雅黑", sans-serif;
         text-align: center;
-        font-size: 3.5rem;
+        font-size: 3rem;
+    }
+    & aside{
+        position: absolute;
+        right: 0;
+        color: #666;
+
+        & .pubTime{
+            display: inline-block;
+            margin-right: 40px;
+        }
+        & .category{
+            display: inline-block;
+        }
     }
 }
 .passage{
-    font-size: 1.2rem;
     margin-bottom: 80px;
+    font-family: arial, "Microsoft YaHei", serif;
+    font-size: 1.2rem;
     & h1{
-        text-align: left;
+        @apply --topHeader;
         font-size: 2.5rem;
         border-bottom: 1px #aaa solid;
-        margin: 20px 0;
+        margin-top: 60px;
+    }
+    & h1:first-child{
+        margin-top: 20px;
     }
     & h2{
-        margin: 20px 0 10px 0;
+        @apply --topHeader;
         font-size: 1.8rem;
+        margin-top: 30px;
+    }
+    & h1 + h2{
+        margin-top: 20px;
     }
     & h3{
-        margin: 20px 0 10px 0;
+        @apply --subHeader;
         font-size: 1.2rem;
     }
     & h4{
-        margin: 20px 0 10px 0;
+        @apply --subHeader;
     }
     & p{
         margin: 10px 0;
         text-indent: 2em;
     }
     & pre{
-        margin: 10px 0 20px 0;
+        margin: 10px 0 20px 2em;
         line-height: 26px;
         & code:first-child{
             user-select: none;
@@ -51,7 +82,7 @@ article{
     & ol{
         line-height: 40px;
         & li{
-            margin-left: 1em;
+            margin-left: 3em;
         }
     }
     & a{

@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 11:13:21
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-28 23:39:43
+* @Last Modified time: 2017-04-29 13:38:07
 */
 section{
     & header{
@@ -30,7 +30,6 @@ section{
 .month{
     margin: 0 20px;
     margin-bottom: 10px;
-    list-style-type: disc;
     & .secTitle{
         font-size: 22px;
         border: none;
@@ -38,11 +37,25 @@ section{
 }
 
 .passage{
-    margin: 0 20px;
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 40px;
     & p{
         display: inline-block;
     }
+    & .category{
+        width: 1em;
+        margin-right: 10px;
+    }
     & .pDate{
         margin-right: 20px;
+    }
+    & .link{
+        &:hover{
+            text-decoration: underline;
+        }
+        &:visited{
+            color: #a86;
+        }
     }
 }

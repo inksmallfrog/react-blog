@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 07:04:26
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-28 21:14:51
+* @Last Modified time: 2017-04-29 12:23:55
 */
 
 'use strict';
@@ -43,6 +43,7 @@ module.exports = {
             stores: `${defaultSettings.srcPath}/stores/`,
             styles: `${defaultSettings.srcPath}/styles/`,
             data: `${defaultSettings.srcPath}/data/`,
+            tools:  `${defaultSettings.srcPath}/tools/`,
             config: `${defaultSettings.srcPath}/config/` + process.env.REACT_WEBPACK_ENV,
             'react/lib/ReactMount': 'react-dom/lib/ReactMount'
         }

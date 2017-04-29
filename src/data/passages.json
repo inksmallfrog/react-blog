@@ -7,19 +7,19 @@
     },
     {
         "title": "测试2",
-        "category": "技术",
+        "category": "艺术",
         "src": "test1.md",
         "date": "2017-04-22"
     },
     {
         "title": "测试3",
-        "category": "技术",
+        "category": "生活",
         "src": "test0.md",
         "date": "2017-03-21"
     },
     {
         "title": "测试4",
-        "category": "技术",
+        "category": "",
         "src": "test0.md",
         "date": "2016-09-12"
     },
