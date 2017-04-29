@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 11:50:21
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-29 13:34:16
+* @Last Modified time: 2017-04-29 22:11:53
 */
 
 'use strict';
@@ -35,7 +35,7 @@ export default class PassageItem extends React.Component{
             <li className={style.passage}>
                 <p className={style.category}><span className={categoryIcon}></span></p>
                 <p className={style.pDate}>{passage.date}日</p>
-                <Link to={'/passage/' + passage.src}><a href="javascript:void(0)" className={style.link}>{passage.title}</a></Link>
+                <Link to={'/passage/' + passage.src}>{passage.title}</Link>
             </li>
         )
     }

@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 07:04:26
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-29 12:23:55
+* @Last Modified time: 2017-04-29 21:45:51
 */
 
 'use strict';
@@ -38,9 +38,10 @@ module.exports = {
         extensions: ['.js', '.jsx'],
         alias: {
             actions: `${defaultSettings.srcPath}/actions/`,
-            components: `${defaultSettings.srcPath}/components/`,
-            sources: `${defaultSettings.srcPath}/sources/`,
             stores: `${defaultSettings.srcPath}/stores/`,
+            dispatcher: `${defaultSettings.srcPath}/dispatcher/`,
+            components: `${defaultSettings.srcPath}/components/`,
+            containers: `${defaultSettings.srcPath}/containers/`,
             styles: `${defaultSettings.srcPath}/styles/`,
             data: `${defaultSettings.srcPath}/data/`,
             tools:  `${defaultSettings.srcPath}/tools/`,

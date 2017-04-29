@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 11:13:21
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-29 13:38:07
+* @Last Modified time: 2017-04-29 22:12:39
 */
 section{
     & header{
@@ -50,7 +50,7 @@ section{
     & .pDate{
         margin-right: 20px;
     }
-    & .link{
+    & a{
         &:hover{
             text-decoration: underline;
         }

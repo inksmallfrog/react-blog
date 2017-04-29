@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 14:36:09
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-29 13:11:09
+* @Last Modified time: 2017-04-29 22:50:46
 */
 
 'use strict';
@@ -21,16 +21,16 @@ export default class Passage extends React.Component{
         this.state = {
             content: '',
             metadata: {
-                title: "untitled",
-                category: "default",
-                date: "2017-04-27"
+                title: 'untitled',
+                category: 'default',
+                date: '2017-04-27'
             },
             previousPassage: null,
             nextPassage: null
         }
         this.getPassage(props.match.params.id);
     }
-    shouldComponentUpdate(nextProps, nextState){
+    shouldComponentUpdate(nextProps){
         if(nextProps.match.params.id != this.props.match.params.id) this.getPassage(nextProps.match.params.id);
         return false; //the getPassage method will trigger update
     }

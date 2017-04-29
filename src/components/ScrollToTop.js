@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 15:13:33
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-28 23:18:13
+* @Last Modified time: 2017-04-29 23:20:00
 */
 
 'use strict';
@@ -12,7 +12,7 @@ import { withRouter } from 'react-router';
 class ScrollToTop extends React.Component {
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
-     // window.scrollTo(0, 0)
+        window.scrollTo(0, 0)
     }
   }
 

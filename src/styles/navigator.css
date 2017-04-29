@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 10:04:55
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-29 09:27:46
+* @Last Modified time: 2017-04-29 22:31:20
 */
 :root{
     --mainLeftMargin: 150px;
@@ -18,36 +18,58 @@
     width: var(--mainLeftMargin);
     font-family: STXihei, "华文细黑", SimSun, "Microsoft YaHei", "微软雅黑", sans-serif;
     /*background-color: white;*/
-    & .navigator{
-        position: fixed;
-        top: 50px;
-        left: var(--navLeftMargin);
-        width: var(--navWidth);
-        text-align: right;
-        color: #999;
-        transition: color var(--transitionTime), top var(--transitionTime);
 
-        &.passageNav{
-            top: 50%;
-        }
-
-        & .navTop{
-            padding: 10px 0;
-        }
-
-        & .navBottom{
-            border-top: #ccc solid 1px;
-            padding: 10px 0;
-            transition: border-color var(--transitionTime);
-        }
-    }
+    /*
+     * 当鼠标悬浮于左侧导航栏时，
+     * 强化内容
+     */
     &:hover{
         & .navigator{
-            color: #333;
-            & .navBottom{
-                border-color: #aaa;
-            }
+            opacity: 1;
         }
     }
 }
+.navigator{
+    position: fixed;
+    top: 50px;
+    left: var(--navLeftMargin);
+    width: var(--navWidth);
+    text-align: right;
+    color: #555;
+    opacity: 0.6;
+    transition: opacity var(--transitionTime), top var(--transitionTime);
+
+    &.passageNav{
+        top: 50%;
+    }
+}
+
+.navTop{
+    padding: 10px 0;
+}
+
+.navBottom{
+    border-top: #555 solid 1px;
+    padding: 10px 0;
+    transition: border-color var(--transitionTime);
+}
+
+.categoryLink{
+    & span{
+        color: #aaa;
+        transition: color var(--transitionTime);
+    }
+    & .categorySelected{
+        color: #333;
+    }
+    &:hover{
+        & span{
+            color: #333;
+        }
+        & .categorySelected{
+            color: #aaa;
+        }
+    }
+}
+
 

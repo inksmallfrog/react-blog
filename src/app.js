@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-26 16:03:43
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-29 13:22:02
+* @Last Modified time: 2017-04-29 23:19:42
 */
 
 'use strict';
@@ -14,8 +14,8 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 
 import ScrollToTop from 'components/ScrollToTop'
 import Navigator from 'components/Navigator';
-import PassageList from 'components/PassageList'
 import Passage from 'components/Passage';
+import PassageListContainer from 'containers/PassageListContainer'
 
 import 'styles/iconfont.css';
 import 'styles/global.css';
@@ -35,7 +35,7 @@ class App extends React.Component{
                     <div>
                         <Route path='/' component={Navigator} />
                         <section className={style.mainSec}>
-                            <Route exact path='/' component={PassageList}/>
+                            <Route exact path='/' component={PassageListContainer} onEnter={()=>window.scrollTo(0, 0)}/>
                             <Route path='/aboutme' component={Passage}/>
                             <Route path='/passage/:id' component={Passage}/>
                         </section>
