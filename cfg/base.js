@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 07:04:26
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-30 17:38:46
+* @Last Modified time: 2017-04-30 22:40:40
 */
 
 'use strict';
@@ -17,7 +17,6 @@ const path = require('path'),
 let additionalPaths = [];
 
 module.exports = {
-    devtool: 'eval',
     output: {
         path: path.join(__dirname, '/../dist/assets'),
         filename: 'bundle.js',

@@ -2,12 +2,11 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-30 22:25:08
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-30 22:31:13
+* @Last Modified time: 2017-04-30 22:36:03
 */
 
 'use strict';
 if (!Array.prototype.findIndex) {
-    console.log('no findIndex');
   Object.defineProperty(Array.prototype, 'findIndex', {
     value: function(predicate) {
      // 1. Let O be ? ToObject(this value).

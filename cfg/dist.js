@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 07:37:51
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-30 20:37:45
+* @Last Modified time: 2017-04-30 22:37:39
 */
 
 'use strict';
@@ -35,7 +35,7 @@ let config = Object.assign({}, baseConfig, {
 config.module.rules.push({
   test: /\.(js|jsx)$/,
   include: [].concat(
-    [ path.join(__dirname, '/../src') ]
+    [ path.join(__dirname, '/../src'),  path.join(__dirname, '/../node_modules')]
   ),
   use: [
     'babel-loader'

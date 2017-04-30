@@ -7,7 +7,7 @@
     "copy": "cp -f ./src/index.html ./dist",
     "start": "npm run copy && node server.js --env=dev",
     "generageData": "node dataGenerator.js",
-    "dist": "npm run copy & webpack --env=dist",
+    "dist": "export NODE_ENV=production & npm run copy & webpack --env=dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -24,6 +24,8 @@
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.0",

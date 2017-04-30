@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 07:17:54
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-28 21:16:19
+* @Last Modified time: 2017-04-30 22:40:45
 */
 
 'use strict';
@@ -14,6 +14,7 @@ const path = require('path'),
 // Add needed plugins here
 
 let config = Object.assign({}, baseConfig, {
+    devtool: 'eval',
     entry: [
         'whatwg-fetch',
         'webpack-hot-middleware/client?reload=true',
