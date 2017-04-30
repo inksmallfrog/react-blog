@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 14:26:15
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-30 13:46:16
+* @Last Modified time: 2017-04-30 22:45:39
 */
 
 'use strict';
@@ -26,7 +26,6 @@ class CategoryStore extends ReduceStore{
     reduce(state, action){
         switch(action.type){
             case CategoryActionType.TOGGLE_CATEGORY:
-                console.log(action);
                 if(!action.category) return state;
                 else {
                     return state.set(action.category, !state.get(action.category));
