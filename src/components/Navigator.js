@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 10:02:52
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-29 22:49:02
+* @Last Modified time: 2017-04-30 14:47:16
 */
 
 'use strict';
@@ -15,13 +15,13 @@ import NavPassageTop from 'components/NavPassageTop';
 
 import style from 'styles/navigator.css';
 
-export default ({match})=>{
-    const isHome = match.isExact;
+export default ({isHome, isShow})=>{
     let navTop = isHome ? <NavHomeTopContainer/> : <NavPassageTop/>,
-        navClass = isHome ? style.navigator : style.navigator + ' ' + style.passageNav;
+        navClass = isShow ? style.nav + ' ' + style.navShow : style.nav,
+        navBox = isHome ? style.navBox : style.navBox + ' ' + style.passageNav;
     return(
-        <nav className={style.navigatorBox}>
-            <div className={navClass}>
+        <nav className={navClass}>
+            <div className={navBox}>
                 {navTop}
                 <ul className={style.navBottom}>
                     <li><Link to="/">主页</Link></li>

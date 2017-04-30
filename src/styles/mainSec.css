@@ -1,0 +1,27 @@
+/*
+* @Author: inksmallfrog
+* @Date:   2017-04-28 10:36:09
+* @Last Modified by:   inksmallfrog
+* @Last Modified time: 2017-04-30 14:40:35
+*/
+@import "_variables";
+
+.mainSec{
+    position: relative;
+    left: 0;
+    height:100%;
+    margin-left: var(--mainLeftMarginPC);
+    margin-right: var(--mainRightMarginPC);
+    padding: var(--mainPaddingPC);
+    transition: left var(--transitionTime);
+    @media (--small-viewport) {
+        margin-left: 0;
+        margin-right: 0;
+        padding: var(--mainPaddingMobil);
+    };
+    &.mainSecRight{
+        @media (--small-viewport) {
+            left: var(--mainLeftMarginPC);
+        };
+    }
+}

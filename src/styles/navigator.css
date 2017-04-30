@@ -2,35 +2,43 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 10:04:55
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-29 22:31:20
+* @Last Modified time: 2017-04-30 14:34:07
 */
-:root{
-    --mainLeftMargin: 150px;
-    --navWidth: 100px;
-    --navLeftMargin: 20px;
-    --transitionTime: .5s;
-}
-.navigatorBox{
+@import '_variables';
+
+.nav{
     position: fixed;
     left: 0;
     top: 0;
     height: 100%;
-    width: var(--mainLeftMargin);
+    width: var(--mainLeftMarginPC);
     font-family: STXihei, "华文细黑", SimSun, "Microsoft YaHei", "微软雅黑", sans-serif;
+    transition: left var(--transitionTime);
     /*background-color: white;*/
+
+
+    @media (--small-viewport) {
+        left: calc(-1 * var(--mainLeftMarginPC));
+    }
+
+    &.navShow{
+        @media (--small-viewport) {
+            left: 0;
+        }
+    }
 
     /*
      * 当鼠标悬浮于左侧导航栏时，
      * 强化内容
      */
     &:hover{
-        & .navigator{
+        & .navBox{
             opacity: 1;
         }
     }
 }
-.navigator{
-    position: fixed;
+.navBox{
+    position: absolute;
     top: 50px;
     left: var(--navLeftMargin);
     width: var(--navWidth);

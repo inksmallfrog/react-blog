@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 11:13:21
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-29 22:12:39
+* @Last Modified time: 2017-04-30 12:44:52
 */
 section{
     & header{
@@ -39,7 +39,10 @@ section{
 .passage{
     margin: 0;
     font-size: 1.2rem;
-    line-height: 40px;
+    @media screen and (max-width: 560px){
+        font-size: 1.7rem;
+    }
+    line-height: 2rem;
     & p{
         display: inline-block;
     }

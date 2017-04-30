@@ -1,0 +1,18 @@
+/*
+* @Author: inksmallfrog
+* @Date:   2017-04-30 14:02:52
+* @Last Modified by:   inksmallfrog
+* @Last Modified time: 2017-04-30 14:33:41
+*/
+:root{
+    --mainLeftMarginPC: 150px;
+    --mainRightMarginPC: 100px;
+    --mainPaddingPC: 50px;
+    --mainPaddingMobil: 30px;
+
+    --navWidth: 100px;
+    --navLeftMargin: 20px;
+    --transitionTime: .5s;
+}
+
+@custom-media --small-viewport (max-width: 560px);

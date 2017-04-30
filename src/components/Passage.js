@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 14:36:09
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-29 22:50:46
+* @Last Modified time: 2017-04-30 12:41:02
 */
 
 'use strict';
@@ -88,17 +88,17 @@ export default class Passage extends React.Component{
                     : <a className={style.linkDisable}>这是最后一篇哟，感谢阅读</a>,
             nextLink = next ?
                     <div className={style.link}><Link to={'/passage/' + next.src}>下一篇：{next.title}</Link></div>
-                    : <a className={style.linkDisable}>下一篇？敬请期待</a>;
+                    : <a className={style.linkDisable}>下一篇：敬请期待</a>;
         return (
             <article>
                 <h1 className={style.title}>{this.state.metadata.title}</h1>
                 <aside>
-                    <div className={style.pubTime}>发表于：{this.state.metadata.date}</div>
                     <div className={style.category}>分类：{this.state.metadata.category}</div>
+                    <div className={style.pubTime}>发表于：{this.state.metadata.date}</div>
                 </aside>
                 <ReactMarkdown source={this.state.content} className={style.passage}/>
-                {nextLink}
                 {previousLink}
+                {nextLink}
             </article>
         )
     }
