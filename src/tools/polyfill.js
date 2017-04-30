@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-30 22:25:08
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-30 23:06:47
+* @Last Modified time: 2017-04-30 23:11:07
 */
 
 'use strict';
@@ -50,5 +50,6 @@ if (!Array.prototype.findIndex) {
   });
 }
 if(!Promise){
+    console.log('no promise!');
     var Promise = require('es6-promise').Promise;
 }

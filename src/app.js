@@ -2,12 +2,12 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-26 16:03:43
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-30 23:04:10
+* @Last Modified time: 2017-04-30 23:10:40
 */
 
 'use strict';
-import 'whatwg-fetch';
 import 'tools/polyfill';
+import 'whatwg-fetch';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
