@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 14:36:09
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-30 20:40:27
+* @Last Modified time: 2017-04-30 20:54:31
 */
 
 'use strict';
@@ -45,7 +45,7 @@ export default class Passage extends React.Component{
         }
         let previousPassage = (passages.length == currentIndex + 1) ? null : passages[currentIndex + 1],
             nextPassage = (currentIndex == 0) ? null : passages[currentIndex - 1];
-        fetch('/' + passagePath)
+        fetch('./' + passagePath)
             .then((response) => {
                 return response.text();
             })
