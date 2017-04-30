@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-30 22:25:08
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-30 23:27:58
+* @Last Modified time: 2017-04-30 23:30:56
 */
 
 'use strict';
@@ -49,5 +49,5 @@ if (!Array.prototype.findIndex) {
     }
   });
 }
-var Promise = require('es6-promise').Promise;
+require('es6-promise').polyfill();
 
