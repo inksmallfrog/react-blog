@@ -2,11 +2,12 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-26 16:03:43
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-30 14:46:18
+* @Last Modified time: 2017-04-30 22:25:33
 */
 
 'use strict';
 import 'whatwg-fetch';
+import 'tools/polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -46,14 +47,20 @@ class App extends React.Component{
     handleTouchMove(e){
         if(!this.touchStartPos.handeled){
             let x = e.touches[0].pageX,
-            xStart = this.touchStartPos.x;
-            if(x - xStart < -10){
+                y = e.touches[0].pageY,
+                xStart = this.touchStartPos.x,
+                yStart = this.touchStartPos.y,
+                dirtaX = x - xStart,
+                dirtaY = y - yStart;
+            if(Math.abs(dirtaX) > Math.abs(dirtaY)){
+                if(dirtaX < -100){
                 NavBarActions.hideNavBar();
                 this.touchStartPos.handeled = true;
-            }
-            else if(x - xStart > 10){
-                NavBarActions.showNavBar();
-                this.touchStartPos.handeled = true;
+                }
+                else if(dirtaX > 100){
+                    NavBarActions.showNavBar();
+                    this.touchStartPos.handeled = true;
+                }
             }
             //e.stopPropagation();
             //e.preventDefault();
