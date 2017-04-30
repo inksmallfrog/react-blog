@@ -1,6 +1,11 @@
 {
     "presets":[
-        "env",
+        ["env", {
+            "targets":{
+                "android": 4.4,
+                "browsers": ["last 2 versions"]
+            }
+        }],
         "react"
     ],
 }
