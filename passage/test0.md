@@ -24,7 +24,7 @@ tags: [Web, CSS]
 <!--more-->
 
 ## 字体
-### font-size
+### 1.font-size
 1. px相对于显示器屏幕分辨率的固定值
 2. em相对不设置font-size时的尺寸进行乘法运算，默认1em = 16px
 3. rem相对于html(根元素)的font-size进行计算，<=IE8的版本无效
@@ -35,18 +35,18 @@ tags: [Web, CSS]
 
 ## 行高
 ![行高示意图](/image/css_lineheight_description.png)
-### 行组成
+### 1.行组成
 1. 顶线(top line)
 2. 中线(middle line)
 3. 基线(base line)
 4. 底线(bottom line)
 
-### 相关名词
+### 2.相关名词
 1. 行高(line-height)：两行文字基线之间的垂直距离
 2. 行间距(line-height - font-height)：一行底线至下一行顶线的垂直距离
 3. 半行间距((line-height - font-height) / 2)：顶线到上行内框或底线到下行内框的距离
 
-### line-height属性
+### 3.line-height属性
 可取值: normal(默认，1.0-1.2), inherit, 百分比, 长度(px/em), 纯数字
 写法:
 ``` css
@@ -65,12 +65,12 @@ div{
 2. 长度：继承值
 3. 纯数字：自己的font-size * line-height
 
-### line-boxes' height
+### 4.line-boxes' height
 height = 行内所有非替换标签产生的inline-boxes中: max(line-height)
 
 ## padding & margin
 百分比值均根据包含块的**宽度**计算
-### 负外边距(negative margin)
+### 1.负外边距(negative margin)
 1. 作用于width可确定的static元素(行内元素，定义width的块元素)
     1. margin-top, margin-left的负值会使元素向该方向平移
     2. margin-bottom, margin-right的负值会使后续文本流元素被拉入
@@ -78,7 +78,7 @@ height = 行内所有非替换标签产生的inline-boxes中: max(line-height)
     margin-left, margin-right的负值会使元素width增大
 3. 作用于浮动元素
     在“浮动流”中与文本流效果相似
-### 外边距合并(margin collapsing)
+### 2.外边距合并(margin collapsing)
 1. 邻近兄弟元素
 2. 父元素与第一或末尾子元素之间
 3. 空元素的上下外边框
@@ -87,7 +87,7 @@ height = 行内所有非替换标签产生的inline-boxes中: max(line-height)
 应用范围：inline-level, table-cell, ::first-letter, ::first-line
 
 ## 替换元素与非替换元素
-### 替换元素(replaced elements)
+### 1.替换元素(replaced elements)
 浏览器根据其标签的元素与属性来判断显示具体的内容
 据我了解替换元素和空元素是同一类东西的不同分类方法
 eg.
@@ -99,7 +99,7 @@ eg.
 <object></object>
 ```
 
-### 非替换元素(non-replaced elements)
+### 2.非替换元素(non-replaced elements)
 元素告知浏览器内容进行渲染。
 非替换行内元素设置垂直padding时不会影响行高（所以可能会和上方或下方的containing-box 重叠），但会影响内容区高度，设置垂直margin无意义。
 
