@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-29 21:07:10
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-29 23:18:19
+* @Last Modified time: 2017-04-30 20:40:44
 */
 
 'use strict';
@@ -12,13 +12,13 @@ import CategoryStore from 'stores/CategoryStore';
 
 function getStores() {
   return [
-    CategoryStore,
+    CategoryStore
   ];
 }
 
 function getState() {
   return {
-    categories: CategoryStore.getState(),
+    categories: CategoryStore.getState()
   };
 }
 

@@ -6,6 +6,7 @@
   "scripts": {
     "copy": "cp -f ./src/index.html ./dist",
     "start": "npm run copy && node server.js --env=dev",
+    "generageData": "node dataGenerator.js",
     "dist": "npm run copy & webpack --env=dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -45,6 +46,7 @@
   },
   "dependencies": {
     "flux": "^3.1.2",
+    "highlight.js": "^9.11.0",
     "immutable": "^3.8.1",
     "koa": "^2.2.0",
     "koa-static": "^3.0.0",

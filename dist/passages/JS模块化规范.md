@@ -1,7 +1,7 @@
 ---
 title: JS模块化规范
 date: 2017-04-16 19:54:06
-catagory: tech
+category: 技术
 tags: [Javascript, 前端, 模块化]
 ---
 # CommonJS

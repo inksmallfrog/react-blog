@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 14:36:09
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-30 12:41:02
+* @Last Modified time: 2017-04-30 20:40:27
 */
 
 'use strict';
@@ -14,6 +14,8 @@ import { Link } from 'react-router-dom';
 import style from 'styles/passage.css';
 
 import passages from 'data/passages.json';
+
+import passageParser from 'lib/passageParser';
 
 export default class Passage extends React.Component{
     constructor(props){
@@ -48,7 +50,7 @@ export default class Passage extends React.Component{
                 return response.text();
             })
             .then((rawMarkdown) => {
-                let metadata,
+                /*let metadata,
                     metadataMap = {};
                 //record & remove metadata
                 let markdown = rawMarkdown.replace(/---((.|\n|\r)*)?---/, (value)=>{
@@ -69,10 +71,11 @@ export default class Passage extends React.Component{
                     })
                 }
                 if(!metadataMap.title){ metadataMap.title = 'untitled'; }
-                if(!metadataMap.category){ metadataMap.category = 'default'; }
+                if(!metadataMap.category){ metadataMap.category = 'default'; }*/
+                let structur = passageParser(rawMarkdown);
                 this.setState({
-                    content: markdown,
-                    metadata: metadataMap,
+                    content: structur.body,
+                    metadata: structur.metadata,
                     previousPassage: previousPassage,
                     nextPassage: nextPassage
                 });
@@ -84,10 +87,10 @@ export default class Passage extends React.Component{
         const previous = this.state.previousPassage,
               next = this.state.nextPassage;
         let previousLink = previous ?
-                    <div className={style.link}><Link to={'/passage/' + previous.src}>上一篇：{previous.title}</Link></div>
+                    <div className={style.link}><Link to={'/passages/' + previous.src}>上一篇：{previous.title}</Link></div>
                     : <a className={style.linkDisable}>这是最后一篇哟，感谢阅读</a>,
             nextLink = next ?
-                    <div className={style.link}><Link to={'/passage/' + next.src}>下一篇：{next.title}</Link></div>
+                    <div className={style.link}><Link to={'/passages/' + next.src}>下一篇：{next.title}</Link></div>
                     : <a className={style.linkDisable}>下一篇：敬请期待</a>;
         return (
             <article>
@@ -96,7 +99,7 @@ export default class Passage extends React.Component{
                     <div className={style.category}>分类：{this.state.metadata.category}</div>
                     <div className={style.pubTime}>发表于：{this.state.metadata.date}</div>
                 </aside>
-                <ReactMarkdown source={this.state.content} className={style.passage}/>
+                <ReactMarkdown source={this.state.content} className={style.passage} softBreak={'br'}/>
                 {previousLink}
                 {nextLink}
             </article>

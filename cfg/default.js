@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 07:10:01
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-29 08:57:05
+* @Last Modified time: 2017-04-30 20:37:18
 */
 
 /**
@@ -66,7 +66,7 @@ function getDefaultModules(){
 
 module.exports = {
     srcPath: srcPath,
-    publicPath: '/assets/',
+    publicPath: './assets/',
     port: dfltPort,
     getDefaultModules: getDefaultModules
 };

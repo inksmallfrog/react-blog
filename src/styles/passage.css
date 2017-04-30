@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 19:15:48
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-30 12:41:15
+* @Last Modified time: 2017-04-30 20:32:18
 */
 :root{
     --linkStyle: {
@@ -39,6 +39,7 @@ article{
     }
 }
 .passage{
+    margin-top: 3rem;
     margin-bottom: 3rem;
     font-family: arial, "Microsoft YaHei", serif;
     font-size: 1.2rem;
@@ -67,8 +68,20 @@ article{
         @apply --subHeader;
     }
     & p{
-        margin: 10px 0;
+        margin: 1em 0;
         text-indent: 2em;
+    }
+    & img{
+        max-width: 100%;
+    }
+    & blockquote{
+        margin-left: 2em;
+        padding-left: 1em;
+        background-color: #f6f6f6;
+        border-left: 5px solid #657b83;
+        & p{
+            text-indent: 0;
+        }
     }
     & pre{
         margin: 10px 0 20px 2em;

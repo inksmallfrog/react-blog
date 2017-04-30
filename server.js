@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-26 16:23:45
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-28 21:02:10
+* @Last Modified time: 2017-04-30 17:51:54
 */
 
 'use strict';
@@ -12,7 +12,7 @@ const koa = require('koa'),
 app.use(serveStatic(__dirname+"/dist"), {
     index: 'index.html'
 });
-app.use(serveStatic(__dirname+"/dist/passage"));
+app.use(serveStatic(__dirname+"/dist/passages"));
 
 const webpack = require('webpack'),
       webpackConfig = require('./webpack.config'),
