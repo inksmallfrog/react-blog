@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-26 16:03:43
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-30 22:25:33
+* @Last Modified time: 2017-04-30 22:29:24
 */
 
 'use strict';
@@ -53,11 +53,11 @@ class App extends React.Component{
                 dirtaX = x - xStart,
                 dirtaY = y - yStart;
             if(Math.abs(dirtaX) > Math.abs(dirtaY)){
-                if(dirtaX < -100){
+                if(dirtaX < -30){
                 NavBarActions.hideNavBar();
                 this.touchStartPos.handeled = true;
                 }
-                else if(dirtaX > 100){
+                else if(dirtaX > 30){
                     NavBarActions.showNavBar();
                     this.touchStartPos.handeled = true;
                 }
