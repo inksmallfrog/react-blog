@@ -2,7 +2,7 @@
 * @Author: inksmallfrog
 * @Date:   2017-04-28 14:36:09
 * @Last Modified by:   inksmallfrog
-* @Last Modified time: 2017-04-30 21:17:28
+* @Last Modified time: 2017-04-30 21:25:34
 */
 
 'use strict';
@@ -45,7 +45,7 @@ export default class Passage extends React.Component{
         }
         let previousPassage = (passages.length == currentIndex + 1) ? null : passages[currentIndex + 1],
             nextPassage = (currentIndex == 0) ? null : passages[currentIndex - 1];
-        fetch('./passages/' + passagePath.replace('.md', ''))
+        fetch('https://raw.githubusercontent.com/inksmallfrog/react-blog/gh-pages/passages/' + passagePath.replace('.md', ''))
             .then((response) => {
                 return response.text();
             })
